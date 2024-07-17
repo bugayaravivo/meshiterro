@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user=User.find(params[:])
-    @post_image=@user.post_images
+    @user=User.find(params[:id])
+    @post_images=@user.post_images
   end
 end
