@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   
   def update
     @user=User.find(params[:id])
-    @user.update(name: params[:user][:name], profile_image: params[:user][:profile_image])
+    @user.update(user_params)
     redirect_to user_path(@user.id)
   end 
 
